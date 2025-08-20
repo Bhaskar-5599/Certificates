@@ -15,37 +15,32 @@
             color: #333;
         }
         .certificate-list {
-            max-width: 800px;
+            max-width: 900px;
             margin: auto;
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 12px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
         }
         .certificate-item {
-            margin: 15px 0;
+            background-color: #fff;
             padding: 10px;
-            border-bottom: 1px solid #ddd;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            width: 300px;
+            text-align: center;
         }
-        .certificate-item:last-child {
-            border-bottom: none;
-        }
-        a {
-            text-decoration: none;
+        .certificate-item h3 {
+            margin-bottom: 10px;
+            font-size: 18px;
             color: #1a73e8;
-            font-weight: bold;
-            cursor: pointer;
         }
-        a:hover {
-            text-decoration: underline;
-        }
-        #pdf-viewer {
-            display: none;
+        .certificate-item img {
             width: 100%;
-            height: 600px;
-            margin-top: 30px;
-            border: 1px solid #ccc;
+            height: auto;
             border-radius: 8px;
+            pointer-events: none; /* disables right click on image in most browsers */
+            user-select: none; /* disables selection */
         }
     </style>
 </head>
@@ -53,40 +48,18 @@
     <h1>My Certificates</h1>
     <div class="certificate-list">
         <div class="certificate-item">
-            Modernizing Python Applications
-            - <a onclick="showPDF('python.pdf')">View Certificate</a>
+            <h3>Modernizing Python applications</h3>
+            <img src="python_page-0001.jpg" alt="Python Certificate">
         </div>
         <div class="certificate-item">
-            TCS iON Career Edge - Young Professional
-            - <a onclick="showPDF('tcsion.pdf')">View Certificate</a>
+            <h3>TCS iON Career Edge-Young Professional</h3>
+            <img src="tcsion_page-0001.jpg" alt="TCS iON Certificate">
         </div>
         <div class="certificate-item">
-            Essentials of GenAI
-            - <a onclick="showPDF('esseofgenai.pdf')">View Certificate</a>
+            <h3>Essentials of GenAI</h3>
+            <img src="essofgenai_page-0001.jpg" alt="Essentials of GenAI Certificate">
         </div>
-         <div class="certificate-item">
-            Learning through Power BI
-            - <a onclick="showPDF('powerbi.pdf')">View Certificate</a>
-         </div>
-       <div class="certificate-item">
-            Python Essentials 1
-            - <a onclick="showPDF('pythonessential1.pdf')">View Certificate</a>
-        </div>
-      <div class="certificate-item">
-            Python Essentials 2
-            - <a onclick="showPDF('pythonessential2.pdf')">View Certificate</a>
-        </div>
+        <!-- Add more certificates using the same format -->
     </div>
-
-    <iframe id="pdf-viewer"></iframe>
-
-    <script>
-        function showPDF(file) {
-            const viewer = document.getElementById('pdf-viewer');
-            viewer.src = file;
-            viewer.style.display = 'block';
-            viewer.scrollIntoView({ behavior: 'smooth' });
-        }
-    </script>
 </body>
 </html>
