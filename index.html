@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Certificates</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background-color: #f5f5f5;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .certificate-list {
+            max-width: 800px;
+            margin: auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .certificate-item {
+            margin: 15px 0;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        .certificate-item:last-child {
+            border-bottom: none;
+        }
+        a {
+            text-decoration: none;
+            color: #1a73e8;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        #pdf-viewer {
+            display: none;
+            width: 100%;
+            height: 600px;
+            margin-top: 30px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <h1>My Certificates</h1>
+    <div class="certificate-list">
+        <div class="certificate-item">
+            Modernizing Python Applications
+            - <a onclick="showPDF('python.pdf')">View Certificate</a>
+        </div>
+        <div class="certificate-item">
+            TCS iON Career Edge - Young Professional
+            - <a onclick="showPDF('tcsion.pdf')">View Certificate</a>
+        </div>
+        <div class="certificate-item">
+            Essentials of GenAI
+            - <a onclick="showPDF('esseofgenai.pdf')">View Certificate</a>
+        </div>
+         <div class="certificate-item">
+            Learning through Power BI
+            - <a onclick="showPDF('powerbi.pdf')">View Certificate</a>
+         </div>
+       <div class="certificate-item">
+            Python Essentials 1
+            - <a onclick="showPDF('pythonessential1.pdf')">View Certificate</a>
+        </div>
+      <div class="certificate-item">
+            Python Essentials 2
+            - <a onclick="showPDF('pythonessential2.pdf')">View Certificate</a>
+        </div>
+    </div>
+
+    <iframe id="pdf-viewer"></iframe>
+
+    <script>
+        function showPDF(file) {
+            const viewer = document.getElementById('pdf-viewer');
+            viewer.src = file;
+            viewer.style.display = 'block';
+            viewer.scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
