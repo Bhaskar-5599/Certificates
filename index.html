@@ -13,34 +13,35 @@
         h1 {
             text-align: center;
             color: #333;
+            margin-bottom: 40px;
         }
-        .certificate-list {
-            max-width: 900px;
-            margin: auto;
+        .certificate-gallery {
             display: flex;
             flex-wrap: wrap;
             gap: 20px;
-            justify-content: center;
+            justify-content: center; /* centers rows */
+            max-width: 1200px;
+            margin: auto;
         }
         .certificate-item {
             background-color: #fff;
-            padding: 10px;
             border-radius: 12px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
             width: 300px;
             text-align: center;
+            padding: 10px;
         }
         .certificate-item h3 {
-            margin-bottom: 10px;
             font-size: 18px;
             color: #1a73e8;
+            margin-bottom: 10px;
         }
         .certificate-item img {
             width: 100%;
             height: auto;
             border-radius: 8px;
-            pointer-events: none; /* disables right click on image in most browsers */
-            user-select: none; /* disables selection */
+            pointer-events: none; /* disables right-click */
+            user-select: none;    /* disables text selection */
         }
     </style>
 </head>
@@ -61,17 +62,15 @@
         </div>
         <div class="certificate-item">
             <h3>Learning through PowerBI</h3>
-            <img src="powerbii_page-0001.jpg" alt="Learning through power bi Certificate">
+            <img src="powerbi_page-0001.jpg" alt="Learning through power bi Certificate">
         </div>
         <div class="certificate-item">
             <h3>Python Essentials 1</h3>
-            <img src="pythonessential1_page-0001.jpg" alt="Python Essentials 1 Certificate">
+            <img src="pythonessentional1_page-0001.jpg" alt="Python Essentials 1 Certificate">
         </div>
         <div class="certificate-item">
             <h3>Python Essentials 2</h3>
-            <img src="pythonessential2_page-0001.jpg" alt="Python Essentials 2 Certificate">
-        </div>
-        
+            <img src="pythonessentional2_page-0001.jpg" alt="Python Essentials 2 Certificate">
     </div>
 </body>
 </html>
